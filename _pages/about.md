@@ -1,0 +1,121 @@
+---
+permalink: /
+title: ""
+excerpt: ""
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+{% if site.google_scholar_stats_use_cdn %}
+{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
+{% else %}
+{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
+{% endif %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+
+<span class='anchor' id='about-me'></span>
+
+I am a second year PhD student studying at the Department of Computer Science and Technology, [Tsinghua University](https://www.tsinghua.edu.cn/), advised by [Prof. Lifeng Sun](https://scholar.google.com/citations?user=GySPN6oAAAAJ). I received my bachelor's degree from [Tsinghua University](https://www.tsinghua.edu.cn/) in June 2024.
+My research interests primarily lie in the field of multimodal reasoning and self-evolving agents.
+
+<!-- My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>1000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
+
+
+# 🔥 News
+- **2026.06**: &nbsp;🎉 One paper accepted by TMLR 2026.
+- **2026.02**: &nbsp;🎉 One paper accepted by CVPR 2026.
+- **2026.01**: &nbsp;🎉 Two papers accepted by ICLR 2026.
+
+# 📖 Educations
+- <img src='images/logos/tsinghua.png' style='height: 28px; vertical-align: middle; margin-right: 6px;'> **2024.09 - Present**, Ph.D. @ Department of Computer Science and Technology, Tsinghua University.
+- <img src='images/logos/tsinghua.png' style='height: 28px; vertical-align: middle; margin-right: 6px;'> **2020.09 - 2024.06**, B.Eng @ Department of Computer Science and Technology, Tsinghua University.
+
+# 💻 Internships
+- <img src='images/logos/yuanbao.png' style='height: 28px; vertical-align: middle; margin-left: 17px; margin-right: 17px;'> **2026.06 - 2026.08**, Research Intern @ Yuanbao Group, Tencent
+- <img src='images/logos/damo.png' style='height: 28px; vertical-align: middle; margin-right: 6px;'> **2024.11 - 2026.05**, Research Intern @ DAMO Academy, Alibaba
+
+# 📝 Publications 
+
+_${\*}$ Equal contribution, ${\dagger}$ Corresponding author_
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv 2026</div><img src='images/publications/browserbc.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Scalable Behaviour Cloning on Browser Using via Skill Distillation](https://arxiv.org/pdf/2606.32014v1)
+
+Kaisen Yang$^{\*}$, **Zheng Jiang$^{\*}$**, Yuzhao Peng$^{\*}$, Houde Qian$^{\*}$, Boshi Zhang$^{\*}$, Youjie Zheng, Shijin Hong, Qingle Liu, Ruoyu Han, Bohan Lyu, Bingxiang He, Eren Cai, Calvin Xiao, Qinhuai Na$^{\dagger}$
+
+- BrowserBC distills human browser interaction traces into reusable natural-language skills organized as a skill graph, providing retrievable and composable procedural priors for efficient browser-agent execution.
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv 2026</div><img src='images/publications/ttsp.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Test-time Scaling over Perception: Resolving the Grounding Paradox in Thinking with Images](https://arxiv.org/pdf/2604.11025)
+
+**Zheng Jiang**, Yiming Chen, Nan He, Jiahui Chen, Chaoyang Li, Houde Qian, Lifeng Sun$^{\dagger}$
+
+- TTSP is a test-time scaling framework that resolves the grounding paradox in tool-augmented visual reasoning by scaling perception through parallel exploration, reliability filtering, and iterative knowledge refinement.
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='images/publications/subflot.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[SubFLOT: Submodel Extraction for Efficient and Personalized Federated Learning via Optimal Transport](https://arxiv.org/pdf/2604.06631)
+
+**Zheng Jiang**, Nan He, Yiming Chen, Lifeng Sun$^{\dagger}$
+
+- SubFLOT is a server-side personalized federated pruning framework that leverages optimal transport and adaptive regularization to address system and statistical heterogeneity without accessing local data.
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/publications/medvr.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[MedVR: Annotation-Free Medical Visual Reasoning via Agentic Reinforcement Learning](https://arxiv.org/pdf/2604.08203v1)
+
+**Zheng Jiang$^{\*}$**, Heng Guo$^{\*}$, Chengyu Fang$^{\*}$, Changchen Xiao, Xinyang Hu, Lifeng Sun$^{\dagger}$, Minfeng Xu$^{\dagger}$
+
+- MedVR is the first end-to-end reinforcement learning framework that seamlessly integrates visual and textual reasoning for medical VLMs, obviating the need for costly intermediate supervision.
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TMLR 2026</div><img src='images/publications/m3ret.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[M3Ret: Unleashing Zero-shot Multimodal Medical Image Retrieval via Self-Supervision](https://arxiv.org/pdf/2509.01360)
+
+Che Liu$^{\*}$, **Zheng Jiang$^{\*}$**, Chengyu Fang$^{\*}$, Heng Guo, Yanjie Zhou, Jiaqi Qu, Le Lu, Minfeng Xu$^{\dagger}$
+
+- A unified visual encoder without any modality-specific customization for various medical visual modalities in 2D and 3D.
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/publications/photon.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models](https://arxiv.org/pdf/2603.25155)
+
+Chengyu Fang$^{\*}$, Heng Guo$^{\*}$, **Zheng Jiang**, Chunming He, Xiu Li$^{\dagger}$, Minfeng Xu$^{\dagger}$
+
+- Photon is a variable-length 3D medical VQA framework with instruction-conditioned token scheduling and surrogate gradients, achieving adaptive acceleration and state-of-the-art performance.
+</div>
+</div>
+
+# 🎖 Honors and Awards
+- **2026.06**: Tsinghua University Merit Student
+- **2026.06**: Outstanding Student Leader of Tsinghua University
+- **2024.06**: Outstanding Graduates of Department of Computer Science and Technology, Tsinghua University
+- **2021-2023**: Academic Excellence Scholarship, Tsinghua University
+
+# 💬 Invited Talks
+- **2026.04**, "MedVR: Annotation-Free Medical Visual Reasoning via Agentic Reinforcement Learning", AI TIME.
