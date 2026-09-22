@@ -12,6 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
     - uses: actions/checkout@v4
     - name: Install Reqs
@@ -21,8 +22,19 @@ jobs:
       run: |
         cd ./google_scholar_crawler
         pip3 install -r requirements.txt
-        python3 main.py
+        if [[ -z "${GOOGLE_SCHOLAR_ID:-}" ]]; then
+          echo "::warning::GOOGLE_SCHOLAR_ID is not configured; keeping the previous citation data."
+          exit 0
+        fi
+        if ! timeout --signal=TERM --kill-after=10s 120s python3 main.py; then
+          echo "::warning::Google Scholar could not be fetched within 120 seconds; keeping the previous citation data."
+          exit 0
+        fi
         cd ./results
+        if ! compgen -G '*.json' > /dev/null; then
+          echo "::warning::The crawler produced no citation data; keeping the previous citation data."
+          exit 0
+        fi
         git init
         git config --local user.name "${GITHUB_ACTOR}"
         export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
